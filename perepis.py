@@ -1,9 +1,7 @@
-s=str(input())
-s1=str()
-max=int()
-while s.find('0')>-1:
-    s=s[s.find('0')::]
-    s1=s[:s.find('1'):]
-    if len(s1)>max: max=len(s1)
-    s=s[len(s1)::]
-print(max)
+with open('Perepis.txt', 'r') as f:
+    a=0
+    for i in f:
+        b=i.split()
+        if i[-5:]<'1978':
+            a+=1
+    print(a)
